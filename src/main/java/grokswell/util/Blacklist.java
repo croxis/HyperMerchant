@@ -38,7 +38,7 @@ public class Blacklist {
 
 			if (!blacklistFile.exists()) {
 				blacklistFile.setWritable(true);
-				InputStream defConfigStream = plugin.getResource("npcblacklist.yml");
+				File defConfigStream = new File(plugin.getDataFolder(), "npcblacklist.yml");
 				YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
 				defConfig.save(blacklistFile);
 			}

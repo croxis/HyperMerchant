@@ -74,7 +74,7 @@ public class MenuButtonData {
     private void loadMenuButtonData() {
 		File menuButtonFile = null;
 		menuButtonFile = new File(dataFolder, "menubuttons.yml");
-		InputStream defConfigStream = plugin.getResource("menubuttons.yml");
+		File defConfigStream = new File(plugin.getDataFolder(), "menubuttons.yml");
 		YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
 	
 		try {
